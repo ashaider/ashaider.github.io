@@ -1,246 +1,191 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Phantom by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Grid</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black; /* Background color to match your image */
+      }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+      .grid-container {
+          display: grid;
+          grid-template-columns: 100px 100px 100px 100px 100px 100px; /* Custom widths based on the image */
+          grid-template-rows: 120px 80px 80px 80px 80px 80px; /* Custom heights */
+          gap: 10px;
+          position: relative;
+      }
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-								</a>
+      .grid-item {
+          background-color: rgb(255, 255, 255);
+          border-radius: 10px;
+          border: 2px solid red; /* Replicating the red lines */
+          box-sizing: border-box; /* Ensure padding and borders are accounted for */
+          width: 100%; /* Full width of the grid area */
+          height: 100%; /* Full height of the grid area */
+      }
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+      .grid-item.slide-in-up {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-up 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-up {
+          0% {
+              opacity: 0; 
+              transform: translateY(-75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateY(0);
+          }
+      }
 
-						</div>
-					</header>
+      .grid-item.slide-in-down {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-down 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-down {
+          0% {
+              opacity: 0; 
+              transform: translateY(75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateY(0); 
+          }
+      }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+      .grid-item.slide-in-left {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-left 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-left {
+          0% {
+              opacity: 0; 
+              transform: translateX(-75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateX(0);
+          }
+      }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>This is Phantom, a free, fully responsive site<br />
-								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Magna</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Lorem</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Feugiat</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Tempus</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Aliquam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Veroeros</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ipsum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dolor</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
+      .grid-item.slide-in-right {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-right 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-right {
+          0% {
+              opacity: 0; 
+              transform: translateX(75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateX(0);
+          }
+      }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+      .grid-item.test {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: test 0.752075s ease-in-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes test {
+        0% {
+          opacity: 0;
+          scale: 0.75;
+        }
 
-			</div>
+        100% {
+          opacity: 1;
+          scale: 1;
+        }
+      }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      /* Delaying the animations for each grid-item */
+      .grid-item:nth-child(1) {
+          animation-delay: 0.1s;
+      }
+      .grid-item:nth-child(2) {
+          animation-delay: 0.17s;
+      }
+      .grid-item:nth-child(3) {
+          animation-delay: 0.2675s; 
+      }
+      .grid-item:nth-child(4) {
+          animation-delay: 0.365s;
+      }
+      .grid-item:nth-child(5) {
+          animation-delay: 0.4625s;
+      }
+      .grid-item:nth-child(6) {
+          animation-delay: 0.4625s;
+      }
+      .grid-item:nth-child(7) {
+          animation-delay: 0.0s;
+      }
 
-	</body>
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item" style="grid-column: 1 / span 4; grid-row: 1 / span 1;">
+          About Me
+        </div>
+
+        <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 1 / span 2;">
+          Filler Top Right
+        </div>
+
+        <div class="grid-item" style="grid-column: 3 / span 4; grid-row: 4 / span 2;">
+          Education
+        </div>
+
+        <div class="grid-item" style="grid-column: 1 / span 2; grid-row: 3 / span 3;">
+          Projects
+        </div>
+
+        <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 3 / span 1;">
+          Filler Right
+        </div>
+
+        <div class="grid-item" style="grid-column: 1 / span 2; grid-row: 2 / span 1;">
+          Filler Left
+        </div>
+
+        <div class="grid-item" style="grid-column: 3 / span 2; grid-row: 2 / span 2;">
+          Profile
+        </div>
+
+    </div>
+
+    <script>
+      // Trigger animation on window load
+      window.onload = function() {
+        /*
+        var itemToAnimate = document.querySelector('.grid-item:nth-child(4)');
+        itemToAnimate.classList.add('slide-in-right');
+        */
+
+        document.querySelector('.grid-item:nth-child(1)').classList.add('slide-in-left');
+        document.querySelector('.grid-item:nth-child(2)').classList.add('slide-in-up');
+        document.querySelector('.grid-item:nth-child(3)').classList.add('slide-in-right');
+        document.querySelector('.grid-item:nth-child(4)').classList.add('slide-in-down');
+        document.querySelector('.grid-item:nth-child(5)').classList.add('slide-in-right');
+        document.querySelector('.grid-item:nth-child(6)').classList.add('slide-in-left');
+        document.querySelector('.grid-item:nth-child(7)').classList.add('test');
+      }
+    </script>
+</body>
 </html>
