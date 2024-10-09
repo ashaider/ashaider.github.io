@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=inter:700|Inter:400');
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'inter';
+  font-weight: 700;
+}
+
+html {
+    font-size: 100%; /* 16px */
+    line-height: 21px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+h1 {
+    font-size: 4.210rem; /* 67.36px */
+}
+
+h2 {
+    font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+    font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+    font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+    font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+    font-size: 0.750rem; /* 12px */
+    color: var(--small-text);
+}
+
+.subtext {
+    font-size: 0.938rem; /* 15px */
+    color: var(--subtext);
+}

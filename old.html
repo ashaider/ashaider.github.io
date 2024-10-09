@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Grid</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black; /* Background color to match your image */
+      }
+
+      .grid-container {
+          display: grid;
+          grid-template-columns: 100px 100px 100px 100px 100px 100px; /* Custom widths based on the image */
+          grid-template-rows: 120px 80px 80px 80px 80px 80px; /* Custom heights */
+          gap: 10px;
+          position: relative;
+      }
+
+      .grid-item {
+          background-color: rgb(255, 255, 255);
+          border-radius: 10px;
+          border: 2px solid red; /* Replicating the red lines */
+          box-sizing: border-box; /* Ensure padding and borders are accounted for */
+          width: 100%; /* Full width of the grid area */
+          height: 100%; /* Full height of the grid area */
+      }
+
+      .grid-item.slide-in-up {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-up 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-up {
+          0% {
+              opacity: 0; 
+              transform: translateY(-75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateY(0);
+          }
+      }
+
+      .grid-item.slide-in-down {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-down 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-down {
+          0% {
+              opacity: 0; 
+              transform: translateY(75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateY(0); 
+          }
+      }
+
+      .grid-item.slide-in-left {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-left 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-left {
+          0% {
+              opacity: 0; 
+              transform: translateX(-75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateX(0);
+          }
+      }
+
+      .grid-item.slide-in-right {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: slide-in-right 0.41666s ease-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes slide-in-right {
+          0% {
+              opacity: 0; 
+              transform: translateX(75px); 
+          }
+          100% {
+              opacity: 1; 
+              transform: translateX(0);
+          }
+      }
+
+      .grid-item.test {
+          position: relative; /* Position for the animation */
+          opacity: 0; /* Start invisible */
+          animation: test 0.752075s ease-in-out 0s 1 normal forwards; /* Define the animation timing */
+      }
+      @keyframes test {
+        0% {
+          opacity: 0;
+          scale: 0.75;
+        }
+
+        100% {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+
+      /* Delaying the animations for each grid-item */
+      .grid-item:nth-child(1) {
+          animation-delay: 0.1s;
+      }
+      .grid-item:nth-child(2) {
+          animation-delay: 0.17s;
+      }
+      .grid-item:nth-child(3) {
+          animation-delay: 0.2675s; 
+      }
+      .grid-item:nth-child(4) {
+          animation-delay: 0.365s;
+      }
+      .grid-item:nth-child(5) {
+          animation-delay: 0.4625s;
+      }
+      .grid-item:nth-child(6) {
+          animation-delay: 0.4625s;
+      }
+      .grid-item:nth-child(7) {
+          animation-delay: 0.0s;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item" style="grid-column: 1 / span 4; grid-row: 1 / span 1;">
+          About Me
+        </div>
+
+        <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 1 / span 2;">
+          Filler Top Right
+        </div>
+
+        <div class="grid-item" style="grid-column: 3 / span 4; grid-row: 4 / span 2;">
+          Education
+        </div>
+
+        <div class="grid-item" style="grid-column: 1 / span 2; grid-row: 3 / span 3;">
+          Projects
+        </div>
+
+        <div class="grid-item" style="grid-column: 5 / span 2; grid-row: 3 / span 1;">
+          Filler Right
+        </div>
+
+        <div class="grid-item" style="grid-column: 1 / span 2; grid-row: 2 / span 1;">
+          Filler Left
+        </div>
+
+        <div class="grid-item" style="grid-column: 3 / span 2; grid-row: 2 / span 2;">
+          Profile
+        </div>
+
+    </div>
+
+    <script>
+      // Trigger animation on window load
+      window.onload = function() {
+        /*
+        var itemToAnimate = document.querySelector('.grid-item:nth-child(4)');
+        itemToAnimate.classList.add('slide-in-right');
+        */
+
+        document.querySelector('.grid-item:nth-child(1)').classList.add('slide-in-left');
+        document.querySelector('.grid-item:nth-child(2)').classList.add('slide-in-up');
+        document.querySelector('.grid-item:nth-child(3)').classList.add('slide-in-right');
+        document.querySelector('.grid-item:nth-child(4)').classList.add('slide-in-down');
+        document.querySelector('.grid-item:nth-child(5)').classList.add('slide-in-right');
+        document.querySelector('.grid-item:nth-child(6)').classList.add('slide-in-left');
+        document.querySelector('.grid-item:nth-child(7)').classList.add('test');
+      }
+    </script>
+</body>
+</html>
