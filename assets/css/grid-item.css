@@ -9,6 +9,7 @@
 .home-grid-item {
     display: flex;
     flex-direction: column;
+    opacity: 0;
     background-color: var(--override-bg, var(--background-space));
     border-radius: 10px;
     padding: 12px;
