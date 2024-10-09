@@ -4,7 +4,7 @@ window.onload = function() {
     var itemToAnimate = document.querySelector('.home-grid-item:nth-child(4)');
     itemToAnimate.classList.add('slide-in-right');
     */
-
+   
     document.querySelector('.home-grid-item:nth-child(1)').classList.add('slide-in-left');
     document.querySelector('.home-grid-item:nth-child(2)').classList.add('slide-in-up');
     document.querySelector('.home-grid-item:nth-child(3)').classList.add('slide-in-right');
@@ -12,7 +12,11 @@ window.onload = function() {
     document.querySelector('.home-grid-item:nth-child(5)').classList.add('slide-in-right');
     document.querySelector('.home-grid-item:nth-child(6)').classList.add('slide-in-left');
     document.querySelector('.home-grid-item:nth-child(7)').classList.add('fade-in-scale-up');
-  }
+
+    setTimeout(function() {
+        document.getElementById("home-grid-container").style.display = "";        
+    }, 100);
+}
 
 const toggleButton = document.getElementById('theme-toggle');
 const currentTheme = document.documentElement.getAttribute('data-theme');
