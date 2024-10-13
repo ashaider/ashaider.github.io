@@ -15,7 +15,7 @@ window.onload = function() {
 
     setTimeout(function() {
         document.getElementById("home-grid-container").style.display = "";        
-    }, 100);
+    }, 200);
 }
 
 const toggleButton = document.getElementById('theme-toggle');
