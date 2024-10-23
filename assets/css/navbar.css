@@ -1,0 +1,55 @@
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--background-space);
+    padding: 4px 8px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+/* Each Nav Item */
+.nav-list li a {
+    text-decoration: none;
+    outline: none;
+    font-size: 0.750rem; /* 12px */
+    color: var(--small-text);
+    font-weight: bold; 
+    padding: 2px 6px;
+    background-color: var(--background-space);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects */
+.nav-list li a:hover {
+    background-color: var(--background-space-highlight);
+    color: var(--text); 
+}
+
+/* Temporarily disable active effect when hovering on a different item */
+.nav-list li a:hover ~ .active {
+    background-color: var(--background-space);
+    color: var(--text-secondary);
+}
+
+/* Active Effects */
+.nav-bar-item.active {
+    background-color: var(--background-space-highlight);
+    color: var(--text);
+}

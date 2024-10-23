@@ -1,3 +1,4 @@
+/* WHAT THE HELL IS A LIGHT THEME RAAAAAAAAAAH */
 :root[data-theme="light"] {
     --text: #012427;
     --small-text: #879091;
@@ -74,6 +75,7 @@
     --small-text: #9d9aa8;
     --background: #070416;
     --background-space: #241D40;
+    --background-space-highlight: #4d4081;
     --primary: #9583e7;
     --secondary: #961d8a;
     --accent: #d93682;
