@@ -3,6 +3,8 @@
     justify-content: center;
     grid-template-columns: repeat(3, minmax(0, 282px));
     grid-template-rows: 160px 101px 122px 266px;
+    overflow: clip;
+    overflow-clip-margin: 80px;
     gap: 15px;
     position: relative;
     width: 100%;
@@ -51,7 +53,7 @@
 }
 
 /* ---------- Responsive breakpoints ---------- */
-/* Below this width the fixed bento layouts stop fitting comfortably,
+/* Below this width the fixed layouts stop fitting comfortably,
    so every grid collapses to a single stacked column. */
 @media (max-width: 860px) {
     .home-grid-container,
