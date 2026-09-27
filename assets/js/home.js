@@ -3,18 +3,6 @@ const currentTheme = document.documentElement.getAttribute('data-theme');
 const navItems = document.querySelectorAll('.nav-bar-item');
 let currentActiveItem = document.querySelector('.nav-bar-item.active');
 
-window.onload = function() {
-    document.querySelector('.slide-in-up').classList.add('slide-in-up');
-    document.querySelector('.slide-in-down').classList.add('slide-in-down');
-    document.querySelector('.slide-in-left').classList.add('slide-in-left');
-    document.querySelector('.slide-in-right').classList.add('slide-in-right');
-    document.querySelector('.fade-in-scale-up').classList.add('fade-in-scale-up');
-    
-    setTimeout(function() {
-        document.getElementById("home-grid-container").style.display = "";        
-    }, 200);
-}
-
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');

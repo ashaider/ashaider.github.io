@@ -14,6 +14,8 @@ html {
     /* A vertical scrollbar is fine (and expected) when content is
        taller than the viewport; a horizontal one never should appear. */
     overflow-x: hidden;
+
+    scrollbar-gutter: stable;
 }
 
 body {
